@@ -7,7 +7,7 @@
 
 ## WIP
 
-Work in progress, not yet usable.
+**Work in progress, not yet usable.**
 
 <br>
 

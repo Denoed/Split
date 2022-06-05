@@ -1,12 +1,11 @@
 
+import Split from './Split.js';
 
 
 export function split( string : string ) : string [] {
-    
-    return [];
+    return Split(string);
 }
 
 export function count( string : string ) : number {
-    
-    return 0;
+    return Split(string).length;
 }
