@@ -1,5 +1,5 @@
 
-import hasBreak from './Break.js'
+import { hasBreak , determineType } from './Break.js'
 
 
 const 
@@ -96,7 +96,6 @@ function findNextBreak(string,index){
 }
 
 
-
 function calculateSurrogate(high,low){
     
     high -= High_Surrogate_First;
@@ -121,91 +120,3 @@ function codePointFrom(string,index = 0){
         ?? codepoint;
 }
 
-
-
-const Extended_Pictographic = 0;
-
-const Regional_Indicator = 1;
-
-const Zero_Width_Joiner = 2;
-
-const Carriage_Return = 3;
-
-const Spacing_Mark = 4;
-
-const Line_Feed = 5;
-
-const Prepend = 6;
-
-const Extend = 7;
-
-const LVT = 8;
-
-const LV = 9;
-
-const L = 10;
-
-const V = 11;
-
-const T = 12;
-
-const Control = 13;
-
-import isPrepend from './BreakProperties/Prepend.js';
-import isControl from './BreakProperties/Control.js';
-import isCarriageReturn from './BreakProperties/CR.js';
-import isExtend from './BreakProperties/Extend.js';
-import isL from './BreakProperties/L.js';
-import isLVT from './BreakProperties/LVT.js';
-import isLineFeed from './BreakProperties/LF.js';
-import isLV from './BreakProperties/LV.js';
-import isRegionalIndicator from './BreakProperties/Regional_Indicator.js';
-import isSpacingMark from './BreakProperties/SpacingMark.js';
-import isT from './BreakProperties/T.js';
-import isV from './BreakProperties/V.js';
-import isZeroWidthJoiner from './BreakProperties/ZWJ.js';
-
-function determineType(codepoint){
-    
-    if(isPrepend(codepoint))
-        return Prepend;
-    
-    if(isControl(codepoint))
-        return Control;
-        
-    if(isCarriageReturn(codepoint))
-        return Carriage_Return;
-    
-    if(isExtend(codepoint))
-        return Extend;
-    
-    if(isL(codepoint))
-        return L;
-    
-    if(isLVT(codepoint))
-        return LVT;
-    
-    if(isLineFeed(codepoint))
-        return Line_Feed;
-        
-    if(isLV(codepoint))
-        return LV;
-    
-    if(isRegionalIndicator(codepoint))
-        return Regional_Indicator;
-        
-    if(isSpacingMark(codepoint))
-        return SpacingMark;
-    
-    if(isT(codepoint))
-        return T;
-        
-    if(isV(codepoint))
-        return V;
-    
-    if(isZeroWidthJoiner(codepoint))
-        return Zero_Width_Joiner;
-            
-    
-    return -1;
-}

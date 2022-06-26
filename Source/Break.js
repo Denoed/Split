@@ -1,4 +1,18 @@
 
+import isRegionalIndicator from './BreakProperties/Regional_Indicator.js';
+import isZeroWidthJoiner from './BreakProperties/ZWJ.js';
+import isCarriageReturn from './BreakProperties/CR.js';
+import isSpacingMark from './BreakProperties/SpacingMark.js';
+import isLineFeed from './BreakProperties/LF.js';
+import isPrepend from './BreakProperties/Prepend.js';
+import isControl from './BreakProperties/Control.js';
+import isExtend from './BreakProperties/Extend.js';
+import isLVT from './BreakProperties/LVT.js';
+import isLV from './BreakProperties/LV.js';
+import isL from './BreakProperties/L.js';
+import isT from './BreakProperties/T.js';
+import isV from './BreakProperties/V.js';
+
 
 const 
     Extended_Pictographic = 0 ,
@@ -17,13 +31,59 @@ const
     Control = 13 ;
 
 
+export function determineType(codepoint){
+    
+    if(isPrepend(codepoint))
+        return Prepend;
+    
+    if(isControl(codepoint))
+        return Control;
+        
+    if(isCarriageReturn(codepoint))
+        return Carriage_Return;
+    
+    if(isExtend(codepoint))
+        return Extend;
+    
+    if(isL(codepoint))
+        return L;
+    
+    if(isLVT(codepoint))
+        return LVT;
+    
+    if(isLineFeed(codepoint))
+        return Line_Feed;
+        
+    if(isLV(codepoint))
+        return LV;
+    
+    if(isRegionalIndicator(codepoint))
+        return Regional_Indicator;
+        
+    if(isSpacingMark(codepoint))
+        return SpacingMark;
+    
+    if(isT(codepoint))
+        return T;
+        
+    if(isV(codepoint))
+        return V;
+    
+    if(isZeroWidthJoiner(codepoint))
+        return Zero_Width_Joiner;
+            
+    
+    return -1;
+}
+
+
 const
     Join = false ,
     Break = true ;
 
 
 
-export default function hasBreak(sequence = []){
+export function hasBreak(sequence = []){
     
     /*
      *  Before[]   Left   × / ÷   Right
