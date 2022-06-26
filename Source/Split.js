@@ -1,25 +1,7 @@
 
+import { toCharcodes , toUnicode } from './String.js'
 import { hasBreak , determineType } from './Break.js'
-
 import * as Surrogate from './Surrogates.js'
-
-
-function toCharCode(char){
-    return char.charCodeAt(0);
-}
-
-function toChars(string){
-    return [ ... string ];
-}
-
-function charcodes(string){
-    return toChars(string)
-        .map(toCharCode);
-}
-
-function toUnicode(codepoints){
-    return String.fromCodePoint(...codepoints);
-}
 
 
 export default function split(string = ''){
@@ -32,7 +14,7 @@ export default function split(string = ''){
         index = 0;
         
     
-    string = charcodes(string);
+    string = toCharcodes(string);
     
     
     while(true){
