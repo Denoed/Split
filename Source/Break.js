@@ -48,7 +48,6 @@ const types = [
     [ isV , V ]
 ]
 
-console.log(types)
 
 export function determineType(codepoint){
         
