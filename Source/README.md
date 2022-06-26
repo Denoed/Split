@@ -5,9 +5,9 @@
 
 <br>
 
-## WIP
+## Status
 
-**Work in progress, not yet usable.**
+**Generally works, but not guaranteed.**
 
 <br>
 
