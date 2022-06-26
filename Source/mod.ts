@@ -18,7 +18,7 @@ export function split( string : string ) : string [] {
 
 /**
  *  Count the number of perceived characters.
- *
+ *  
  *  ```javascript
  *  import { count } from "https://deno.land/x/split@v0.0.2/mod.ts";
  *  
