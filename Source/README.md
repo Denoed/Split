@@ -11,13 +11,7 @@
 
 <br>
 
-## Module
-
-```
-https://deno.land/x/split@v0.0.0/mod.ts
-```
-
-## Usage
+## Examples
 
 ### Split
 

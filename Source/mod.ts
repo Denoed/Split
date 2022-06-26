@@ -22,7 +22,7 @@ export function split( string : string ) : string [] {
  *  ```javascript
  *  import { count } from 'https://deno.land/x/split/mod.ts';
  *  
- *  split('⛳Hi🏀'); // 4
+ *  count('⛳Hi🏀'); // 4
  */
 
 export function count( string : string ) : number {
