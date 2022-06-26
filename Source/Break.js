@@ -31,47 +31,28 @@ const
     Control = 13 ;
 
 
+const types = [
+    [ isRegionalIndicator , Regional_Indicator ] ,
+    [ isZeroWidthJoiner , Zero_Width_Joiner ] ,
+    [ isCarriageReturn , Carriage_Return ] ,
+    [ isSpacingMark , Spacing_Mark ] ,
+    [ isLineFeed , Line_Feed ] ,
+    [ isPrepend , Prepend ] ,
+    [ isControl , Control ] ,
+    [ isExtend , Extend ] ,
+    [ isLVT , LVT ] ,
+    [ isLV , LV ] ,
+    [ isL , L ] ,
+    [ isT , T ] ,
+    [ isV , V ]
+]
+
+
 export function determineType(codepoint){
-    
-    if(isPrepend(codepoint))
-        return Prepend;
-    
-    if(isControl(codepoint))
-        return Control;
         
-    if(isCarriageReturn(codepoint))
-        return Carriage_Return;
-    
-    if(isExtend(codepoint))
-        return Extend;
-    
-    if(isL(codepoint))
-        return L;
-    
-    if(isLVT(codepoint))
-        return LVT;
-    
-    if(isLineFeed(codepoint))
-        return Line_Feed;
-        
-    if(isLV(codepoint))
-        return LV;
-    
-    if(isRegionalIndicator(codepoint))
-        return Regional_Indicator;
-        
-    if(isSpacingMark(codepoint))
-        return SpacingMark;
-    
-    if(isT(codepoint))
-        return T;
-        
-    if(isV(codepoint))
-        return V;
-    
-    if(isZeroWidthJoiner(codepoint))
-        return Zero_Width_Joiner;
-            
+    for(const [ isType , type ] of types)
+        if(isType(codepoint))
+            return type;
     
     return -1;
 }
