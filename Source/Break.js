@@ -1,18 +1,19 @@
 
-import isRegionalIndicator from './BreakProperties/Regional_Indicator.js';
-import isZeroWidthJoiner from './BreakProperties/ZWJ.js';
-import isCarriageReturn from './BreakProperties/CR.js';
-import isSpacingMark from './BreakProperties/SpacingMark.js';
-import isLineFeed from './BreakProperties/LF.js';
-import isPrepend from './BreakProperties/Prepend.js';
-import isControl from './BreakProperties/Control.js';
-import isExtend from './BreakProperties/Extend.js';
-import isLVT from './BreakProperties/LVT.js';
-import isLV from './BreakProperties/LV.js';
-import isL from './BreakProperties/L.js';
-import isT from './BreakProperties/T.js';
-import isV from './BreakProperties/V.js';
-
+import { 
+    isRegionalIndicator ,
+    isZeroWidthJoiner ,
+    isCarriageReturn ,
+    isSpacingMark ,
+    isLineFeed ,
+    isPrepend ,
+    isControl ,
+    isExtend ,
+    isLVT ,
+    isLV ,
+    isL ,
+    isT ,
+    isV
+} from './BreakProperties/mod.js'
 
 const 
     Extended_Pictographic = 0 ,
@@ -47,6 +48,7 @@ const types = [
     [ isV , V ]
 ]
 
+console.log(types)
 
 export function determineType(codepoint){
         
