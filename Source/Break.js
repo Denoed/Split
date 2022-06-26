@@ -1,36 +1,20 @@
 
-import './BreakProperties/Properties.js';
 
-
-
-
- const Extended_Pictographic = 0;
-
- const Regional_Indicator = 1;
-
- const Zero_Width_Joiner = 2;
-
- const Carriage_Return = 3;
-
- const Spacing_Mark = 4;
-
- const Line_Feed = 5;
-
- const Prepend = 6;
-
- const Extend = 7;
-
- const LVT = 8;
-
- const LV = 9;
-
- const L = 10;
-
- const V = 11;
-
- const T = 12;
- 
- const Control = 13;
+const 
+    Extended_Pictographic = 0 ,
+    Regional_Indicator = 1 ,
+    Zero_Width_Joiner = 2 ,
+    Carriage_Return = 3 ,
+    Spacing_Mark = 4 ,
+    Line_Feed = 5 ,
+    Prepend = 6 ,
+    Extend = 7 ,
+    LVT = 8 ,
+    LV = 9 ,
+    L = 10 ,
+    V = 11 ,
+    T = 12 ,
+    Control = 13 ;
 
 
 const
